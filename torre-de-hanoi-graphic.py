@@ -120,7 +120,6 @@ def BFS(nodo):
         if esEstadoMeta == False:
             print('Nodo Padre:', nodo.numeroNodo, ' Estado :', nodo.estado)
             tieneHijos = False
-            padre = deepcopy(nodo)
 
             i = 1
             while tieneHijos == False:
@@ -132,7 +131,6 @@ def BFS(nodo):
                     numeroNodo += 1
                     hijo.numeroNodo = numeroNodo
                     hijo.padre = nodo
-                    padre.hijos.append(hijo)
                     hijosList.append(hijo)
                     print('└--Nodo Hijo:', hijo.numeroNodo,
                           'Estado:', hijo.estado)
@@ -167,7 +165,6 @@ def BFS_enhanced(nodo):
         if esEstadoMeta == False and nodo.puntos == puntosMin:
             print('\nNodo Padre:', nodo.numeroNodo, ' Estado :', nodo.estado, 'Costo = ', nodo.puntos)
             tieneHijos = False
-            padre = deepcopy(nodo)
 
             i = 1
             while tieneHijos == False:
@@ -259,27 +256,6 @@ def imprimirDisco(numDisco):
     
     return disco
 
-
-# def estadoAleatorio(numDiscos):
-#     global columnas
-#     discos = []
-
-#     for i in range(numDiscos):
-#         discos.append(i + 1)
-
-#     random.shuffle(discos)
-
-#     estadoInicial = [[], [], []]
-
-#     while len(discos) > 0:         
-#         columnaAleatoria = int(random.randint(columnas))
-#         indexDiscoAleatorio = random.randint(len(discos))
-
-#         estadoInicial[columnaAleatoria].append(discos.pop(indexDiscoAleatorio))
-
-#     random.shuffle(estadoInicial)
-
-#     return estadoInicial
 
 columnas = 3
 numDiscos = 4

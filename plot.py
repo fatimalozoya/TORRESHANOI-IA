@@ -12,7 +12,7 @@ def movimientosPlot(df, style):
         x_title = 'Estado Inicial',
         y_title = 'Movimientos',
         width = 1200,
-        x_label_rotation = 270,
+        x_label_rotation = 270
     )
 
     c.add('DFS', df['Movimientos DFS'])
@@ -32,7 +32,7 @@ def tiempoPlot(df, style):
         x_title = 'Estado Inicial',
         y_title = 'Tiempo (Seg.)',
         width = 1200,
-        x_label_rotation = 270,
+        x_label_rotation = 270
     )
 
     c.add('DFS', df['Tiempo DFS'])
@@ -62,9 +62,9 @@ def main():
 
         
         print(df)
-        input("\nPresiona cualquier tecla para continuar...")
+        input("\nPresiona Enter para continuar...")
     else:
         print("\nNo se ha creado el archivo 'plot.csv', por favor ejecuta: torre-de-hanoi.py")
-        input("\nPresiona cualquier tecla para continuar...")
+        input("\nPresiona Enter para continuar...")
 
 main()
